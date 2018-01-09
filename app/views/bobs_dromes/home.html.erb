@@ -9,8 +9,11 @@
     <label class="label">Enter word or phrase:</label><br><br>
 
     <div class="form-things">
-      <% if @value %>
+      <!-- <%# binding.pry %> -->
+      <% if !@value.nil? %>
         <%= text_field_tag :'palindrome[input]', nil, :value => "#{@value}" %><br>
+        <!-- <%# binding.pry %> -->
+        <% @value = nil %>
         <%= submit_tag "find out", {class: "submit"} %><br>
         <% if flash[:notice] %>
         <div class="dot"></div>
@@ -24,7 +27,8 @@
         </div>
         <% end %>
       <% else %>
-        <%= text_field_tag :'palindrome[input]', nil, :placeholder => 'Check palindrominity...', value: nil %><br>
+        <%= text_field_tag :'palindrome[input]', nil, :placeholder => 'Check palindrominity...' %><br>
+        <!-- <%# binding.pry %> -->
         <%= submit_tag "find out", {class: "submit"} %><br>
         <% if flash[:notice] %>
         <div class="dot"></div>
