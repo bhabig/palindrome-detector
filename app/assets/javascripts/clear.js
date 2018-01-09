@@ -1,4 +1,3 @@
-let input_val;
 $(document).ready(
   function() {
     $('#palindrome_input').focus(function(e) {
