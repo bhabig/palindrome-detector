@@ -2,10 +2,10 @@ $(document).ready(
   function() {
     $('#palindrome_input').focus(function(e) {
       e.preventDefault();
-      let dotCollection = $('.dot');
-      let resultDiv = $('.result');
-      let submitBtn = $('.submit');
-      let inputFld = $('#palin_input');
+      var dotCollection = $('.dot');
+      var resultDiv = $('.result');
+      var submitBtn = $('.submit');
+      var inputFld = $('#palin_input');
 
       inputFld.context.activeElement.removeAttribute('value');
       inputFld.context.activeElement.setAttribute('placeholder', 'Check palindrominity...');
