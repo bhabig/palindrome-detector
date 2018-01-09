@@ -1,0 +1,54 @@
+<div class="top">
+  <p class="top-text">ULTIMATE PALINDROME DETECTOR</p>
+</div><br><br>
+
+<div class="main">
+
+  <%= form_tag check_path, {class: "form"} do %>
+
+    <label class="label">Enter word or phrase:</label><br><br>
+
+    <div class="form-things">
+      <% if @value %>
+        <%= text_field_tag :'palindrome[input]', nil, :value => "#{@value}" %><br>
+        <%= submit_tag "find out", {class: "submit"} %><br>
+        <% if flash[:notice] %>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="result">
+          <%= content_tag(:div, flash[:notice], class: "signed-in", :id => "flash_notice") if flash[:notice] %>
+        </div>
+        <% end %>
+      <% else %>
+        <%= text_field_tag :'palindrome[input]', nil, :placeholder => 'Check palindrominity...', value: nil %><br>
+        <%= submit_tag "find out", {class: "submit"} %><br>
+        <% if flash[:notice] %>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="result">
+          <%= content_tag(:div, flash[:notice], class: "signed-in", :id => "flash_notice") if flash[:notice] %>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="palin-desc">
+    <h2>WHAT IS A PALINDROME?</h2>
+    <p id="line"></p>
+    <p class="p2">
+      A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as forward, such as madam or "taco cat" or racecar. Sentence-length palindromes may be written when allowances are made for adjustments to capital letters, punctuation, and word dividers, such as "A man, a plan, a canal, Panama!", "Was it a car or a cat I saw?" or "No 'x' in Nixon".
+    </p>
+    <p class="p2">
+      <strong>[</strong> <em>Our proprietary software will detect any palindrome regardless of sentence formatting or word capitalization</em> <strong>]</strong>
+    </p>
+  </div>
+</div>
