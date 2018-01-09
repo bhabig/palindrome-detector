@@ -19,7 +19,7 @@ html,body {
   text-align: center;
   height: 110px;
   background-color: #282828;
-  letter-spacing: 10px;
+  letter-spacing: 12.5px;
 }
 
 #line {
@@ -142,6 +142,7 @@ input {
   border-radius: 4px;
   font-size: 16px;
   color: #282828;
+  font-weight: bold;
   background-color: #F5F5F5;
   padding-left: 8px;
   padding-right: 8px;
@@ -149,7 +150,7 @@ input {
   height: 30px;
   width: auto;
   cursor: pointer;
-  border: 1px solid lightgrey;
+  border: 2px solid lightgrey;
 }
 
 .submit:hover,
