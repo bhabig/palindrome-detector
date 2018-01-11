@@ -1,11 +1,11 @@
-class BobsDromesController < ApplicationController
+class BobsPalindromesController < ApplicationController
   def home
   end
 
   def input_check
 
     @value = palindrome_params[:input]
-    flash[:notice] = BobsDrome.input_check(@value)
+    flash[:notice] = BobsPalindrome.input_check(@value)
     session[:value] = @value
     redirect_to root_path
 
